@@ -1,0 +1,360 @@
+/Users/nadeembahou/anaconda3/envs/en-685-621/bin/python /Users/nadeembahou/Downloads/Pa1/nadeem.py
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(en-685-621) (base) Nadeems-MacBook-Pro:Assignment 1 - Algorithms nadeembahou$ /Users/nadeembahou/anaconda3/envs/en-685-621/bin/python /Users/nadeembahou/Downloads/Pa1/nadeem.py
+/Users/nadeembahou/Downloads/Pa1/nadeem.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+
+#1A: statistics of each feature and class using the test statistics:
+ 
+                                          0            1             2            3
+Feature                        sepal_length  sepal_width  petal_length  petal_width
+Setosa Minimum                          4.3          2.3           1.0          0.1
+Setosa Maximum                          5.8          4.4           1.9          0.6
+Setosa Mean                           5.006        3.418         1.464        0.244
+Setosa Trimmed Mean (10%)            5.0025       3.4025        1.4625        0.235
+Setosa Standard Deviation          0.348947     0.377195      0.171767     0.106132
+Setosa Skewness                    0.116454     0.103814      0.069673     1.161022
+Setosa Kurtosis                   -0.345765     0.685134      0.813665     1.296475
+Versicolor Minimum                      4.9          2.0           3.0          1.0
+Versicolor Maximum                      7.0          3.4           5.1          1.8
+Versicolor Mean                       5.936         2.77          4.26        1.326
+Versicolor Trimmed Mean (10%)        5.9375         2.78        4.2925        1.325
+Versicolor Standard Deviation      0.510983     0.310644      0.465188     0.195765
+Versicolor Skewness                 0.10219    -0.351867     -0.588159    -0.030236
+Versicolor Kurtosis               -0.598827    -0.448272     -0.074402    -0.487833
+Virginica Minimum                       4.9          2.2           4.5          1.4
+Virginica Maximum                       7.9          3.8           6.9          2.5
+Virginica Mean                        6.588        2.974         5.552        2.026
+Virginica Trimmed Mean (10%)         6.5725       2.9625          5.51       2.0325
+Virginica Standard Deviation       0.629489     0.319255      0.546348      0.27189
+Virginica Skewness                 0.114445     0.354878      0.532822     -0.12556
+Virginica Kurtosis                -0.087942     0.519766     -0.256472    -0.661348
+
+1B - Analysis, explanations & Conclusions: 
+
+Sepal Length Analysis:
+
+Range: Setosa: 4.3-5.8, Versicolor: 4.9-7.0, Virginica: 4.9-7.9.               
+Mean: Setosa: ~5.006, Versicolor: ~5.936, Virginica: ~6.588.                     
+Trimmed Mean (10%): Setosa: ~5.0025, Versicolor: ~5.9375, Virginica: ~6.5725. 
+Standard Deviation: Setosa: ~0.349, Versicolor: ~0.511, Virginica: ~0.629.
+Skewness: Setosa: +0.116, Versicolor: +0.102, Virginica: +0.114.
+Kurtosis: Setosa: -0.346, Versicolor: -0.599, Virginica: -0.088.
+
+Sepal Width Analysis:
+
+Range: Setosa: 2.3-4.4, Versicolor: 2.0-3.4, Virginica: 2.2-3.8.
+Mean: Setosa: ~3.418, Versicolor: ~2.77, Virginica: ~2.974.
+Trimmed Mean (10%): Setosa: ~3.4025, Versicolor: ~2.78, Virginica: ~2.9625.
+Standard Deviation: Setosa: ~0.377, Versicolor: ~0.311, Virginica: ~0.319.
+Skewness: Setosa: +0.104, Versicolor: -0.352, Virginica: +0.355.
+Kurtosis: Setosa: +0.685, Versicolor: -0.448, Virginica: +0.520.
+Petal Length Analysis:
+
+Petal Length Analysis:
+
+Range: Setosa: 1.0-1.9, Versicolor: 3.0-5.1, Virginica: 4.5-6.9.
+Mean: Setosa: ~1.464, Versicolor: ~4.26, Virginica: ~5.552.
+Trimmed Mean (10%): Setosa: ~1.4625, Versicolor: ~4.2925, Virginica: ~5.51.
+Standard Deviation: Setosa: ~0.1718, Versicolor: ~0.4652, Virginica: ~0.5463.
+Skewness: Setosa: +0.0697, Versicolor: -0.5882, Virginica: +0.5328.
+Kurtosis: Setosa: +0.8137, Versicolor: -0.0744, Virginica: -0.2565.
+
+Petal Width Analysis:
+
+Range: Setosa: 0.1-0.6, Versicolor: 1.0-1.8, Virginica: 1.4-2.5.
+Mean: Setosa: ~0.244, Versicolor: ~1.326, Virginica: ~2.026.
+Trimmed Mean (10%): Setosa: ~0.235, Versicolor: ~1.325, Virginica: ~2.0325.
+Standard Deviation: Setosa: ~0.1061, Versicolor: ~0.1958, Virginica: ~0.2719.
+Skewness: Setosa: +0.1610, Versicolor: -0.0302, Virginica: -0.1256.
+Kurtosis: Setosa: +0.6851, Versicolor: -0.4878, Virginica: -0.6613.
+
+
+Summary:
+
+1. Sepal Length:
+   - Virginica generally has longer sepals than Versicolor and Setosa.
+   - Setosa shows the least variability in sepal length.
+   - All species exhibit a slight right skew in sepal length distributions.
+
+2. Sepal Width:
+   - Setosa tends to have wider sepals compared to Versicolor and Virginica.
+   - Setosa's sepal width distribution is the most variable.
+   - Versicolor's sepal width distribution is slightly left-skewed.
+
+3. Petal Length:
+   - Virginica typically has the longest petals among the three species.
+   - Setosa's petal length distribution is the most peaked.
+   - All species exhibit a slight right skew in petal length.
+
+4. Petal Width:
+   - Virginica generally has wider petals compared to Versicolor and Setosa.
+   - Virginica's petal width distribution shows the highest variability.
+   - Setosa's petal width distribution is the most positively skewed.
+      
+In conclusion, Setosa exhibits greater variability in both sepal length and width compared to the other two species. Additionally, its petal length and width distributions tend to be more 
+peaked and skewed to the right, indicating a more distinct morphology. On the other hand, Versicolor and Virginica show more similar distributions in terms of skewness and kurtosis, 
+suggesting a closer resemblance in their morphological features. However, slight differences in mean and standard deviation indicate subtle distinctions between the two species.
+
+
+2a - Visually see two sets of features and the class they belong to --> Printed
+
+2b - part B-i: An algorithm (pseudocode) to sort the four features in the dataset.:
+
+1. Input: Dataset with features (sepal_length, sepal_width, petal_length, petal_width)
+2. For each feature in the dataset:
+    a. Initialize an empty list to store the values of the current feature.
+    b. Iterate through each row in the dataset and append the value of the current feature to the list.
+    c. Sort the list in ascending order using a suitable sorting algorithm --> Merge Sort.
+    d. Update the column in the dataset with the sorted values.
+3. Output: Dataset with each feature sorted.
+
+2b part ii. Time Complexity Analysis:
+
+The algorithm utilizes Merge Sort. It has an average-case time complexity of O(n log n), 
+   making it suitable for handling large datasets. Sorting each of the four features
+  independently results in a total time complexity of O(n log n) for the entire dataset, 
+  showcasing the algorithm's effectiveness in handling sorting operations efficiently.
+
+
+Sorted Dataset:
+
+     sepal_length  sepal_width  petal_length  petal_width    species
+0             4.3          2.0           1.0          0.1     setosa
+1             4.4          2.2           1.1          0.1     setosa
+2             4.4          2.2           1.2          0.1     setosa
+3             4.4          2.2           1.2          0.1     setosa
+4             4.5          2.3           1.3          0.1     setosa
+..            ...          ...           ...          ...        ...
+145           7.7          3.9           6.4          2.4  virginica
+146           7.7          4.0           6.6          2.4  virginica
+147           7.7          4.1           6.7          2.5  virginica
+148           7.7          4.2           6.7          2.5  virginica
+149           7.9          4.4           6.9          2.5  virginica
+
+[150 rows x 5 columns]
+
+2B-IV. Determine if any of the four features can separate the three plant species:
+ Visually inspecting the data, it appears that the "petal_length" feature has the potential
+to separate the three plant species to some extent. This is because the range of petal lengths for
+setosa flowers is noticeably different from the ranges for versicolor and virginica. However, there
+is some overlap between versicolor and virginica, indicating that petal length alone may not be
+sufficient for perfect separation. The other features (sepal_length, sepal_width, and petal_width)
+show considerable overlap among the species, making them less effective for species separation.
+
+2B-V. Provide an explanation of the results:
+
+# A. Among the four features, petal length exhibits the most distinct distribution among the three
+# plant species. Setosa flowers tend to have shorter petal lengths compared to versicolor and virginica,
+# which have longer and more varied petal lengths. This feature's ability to partially separate the species
+# is due to its significant differences in range and distribution across the species. However, overlap
+# between versicolor and virginica suggests that petal length alone may not be entirely reliable for
+# species separation.
+
+# B. The metric used to determine separation was visual inspection of the data distribution for each feature
+# across the three species. This method allows for qualitative assessment of the potential of each feature
+# to separate the species based on their distributions. Visual inspection is chosen for its simplicity and
+# ease of interpretation, providing a quick overview of feature distributions and their potential for separation.
+
+
+2c: Algorithm to normalize the Iris data by feature:
+Before normalization:
+   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+
+After normalization:
+   sepal_length  sepal_width  petal_length  petal_width species
+0      0.222222     0.625000      0.067797     0.041667  setosa
+1      0.166667     0.416667      0.067797     0.041667  setosa
+2      0.111111     0.500000      0.050847     0.041667  setosa
+3      0.083333     0.458333      0.084746     0.041667  setosa
+4      0.194444     0.666667      0.067797     0.041667  setosa
+
+ 2D- i - For each class (species) in the dataset:
+a. Calculate the mean of each feature (sepal length, sepal width, petal length, petal width) for that class.
+b. For each observation in the class:
+      i. Calculate the Euclidean distance between the observation and the mean of the class.
+c. Sort the observations in the class based on their distances from the mean in descending order.
+d. Remove the furthest observation from the mean (outlier).
+e. Repeat steps b-d until the desired number of outliers are removed or until convergence criteria are met.
+
+
+ 2d - ii n = no. of observations in the dataset, m =  no. of features, and k = no .of classes.
+mean for each class: O(n * m * k)  / Distance for each observation: O(n * m * k) / Sorting observations by distance: O(n * log(n))
+
+Total Running Time: O(n * m * k + n * log(n))
+Assumption: Based on the small dataset and the no. of classes is small compared to the number of observations.
+
+
+ 2d- iii: Class created!
+
+
+ 2d- iv: The cleaned data without the outliers has been plotted
+
+Plotted: sepal_length vs sepal_width for setosa
+Plotted: sepal_length vs petal_length for setosa
+Plotted: sepal_length vs petal_width for setosa
+Plotted: sepal_width vs petal_length for setosa
+Plotted: sepal_width vs petal_width for setosa
+Plotted: petal_length vs petal_width for setosa
+Plotted: sepal_length vs sepal_width for versicolor
+Plotted: sepal_length vs petal_length for versicolor
+Plotted: sepal_length vs petal_width for versicolor
+Plotted: sepal_width vs petal_length for versicolor
+Plotted: sepal_width vs petal_width for versicolor
+Plotted: petal_length vs petal_width for versicolor
+Plotted: sepal_length vs sepal_width for virginica
+Plotted: sepal_length vs petal_length for virginica
+Plotted: sepal_length vs petal_width for virginica
+Plotted: sepal_width vs petal_length for virginica
+Plotted: sepal_width vs petal_width for virginica
+Plotted: petal_length vs petal_width for virginica
+
+Cleaned Data:
+   sepal_length  sepal_width  petal_length  petal_width species
+0      0.222222     0.625000      0.067797     0.041667  setosa
+1      0.166667     0.416667      0.067797     0.041667  setosa
+2      0.111111     0.500000      0.050847     0.041667  setosa
+3      0.083333     0.458333      0.084746     0.041667  setosa
+4      0.194444     0.666667      0.067797     0.041667  setosa
+
+Outliers:
+    sepal_length  sepal_width  petal_length  petal_width species
+13      0.000000     0.416667      0.016949     0.000000  setosa
+14      0.416667     0.833333      0.033898     0.041667  setosa
+15      0.388889     1.000000      0.084746     0.125000  setosa
+22      0.083333     0.666667      0.000000     0.041667  setosa
+23      0.222222     0.541667      0.118644     0.166667  setosa
+
+2D-V- parts A & B:
+
+ A - Yes, there were outliers detected in the dataset. The outliers were identified using the z-score method, which calculates the deviation of
+each data point from the mean in terms of standard deviations. If a data point's z-score exceeds a certain threshold (typically 2 or 3 
+standard deviations), it is considered an outlier. In this case, outliers were determined by comparing the z-scores of each feature within 
+each class to a predefined threshold. Outliers were then removed based on this criterion.
+
+B- The z-score method was chosen for outlier detection because it provides a standardized way to detect outliers across different features 
+and allows for comparison of the magnitude of deviations regardless of the scale of the feature. Additionally, it offers a more objective 
+and standardized approach compared to visual inspection, ensuring consistency and reliability in identifying outliers across various 
+datasets and analysis scenarios.
+
+
+ 2E - i: Rank four features in dataset - Pseudocode:
+Algorithm RankFeatures(IrisDataset):
+    Initialize an empty dictionary FeatureScores
+    
+    For each feature in ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']:
+        Calculate the variability of the feature across different species
+        
+        Store the feature score in the FeatureScores dictionary
+        
+    Rank the features based on their scores in descending order
+    
+    Return the ranked features 
+ 
+
+2E - ii: Total and running time of algorithm in O-notation andT (n). :
+ 
+    - Calculating variability for each feature across species: Time complexity of O(n), where n = data points.
+    - Storing feature scores in a dictionary: Constant time complexity, denoted as O(1).
+    - Ranking features: Constant time complexity as well, O(1).
+    - Total running time complexity: Mostly from calculating variablity so most likely O(n).
+
+2E - iii: Implement the design, with a class for future use:
+
+Ranked features:
+sepal_width: 0.1412943554869083
+sepal_length: 0.13930929884738394
+petal_width: 0.08050169982262358
+petal_length: 0.06753202442601054
+
+2E - iv: Determine if any of the four features can separate the three plant types: 
+
+After inspecting the plots, more particulary on the diagonals, the features that most effectively separates the three plant 
+types is petal length and petal width. These features exhibit distinct clustering for each plant species when plotted.
+
+2E - V - A: Was there any feature that could separate the data by plant species; if so why, if not why not? 
+Petal length and petal width could effectively separate the data by plant species(not 100 percent fully but almost), they have 
+significantly different values across the three species, resulting in clear separation when visualized.
+
+
+2E - V - B: If a feature could not separate the plant types; what conclusion can drawn from this feature?
+
+If a feature could not effectively separate the plant types, it implies that this feature does not exhibit significant differences 
+across the species to reliably distinguish between them.
+
+
+2E - V - C: Can a metric be developed to complement the ranking method? Explain why or why not: 
+
+Yes, we could create an additional metric to enhance the ranking method. This metric would assess how much the distributions of 
+each feature overlap between different species. It could help identify the most useful features for classifying plant species. 
+
+
+#2F
+# Separate features and labels
+ i. Use the built-in PCA to perform analysis of the Iris data set using all species (classes):
+
+ii. Using the built-in PCA to perform analysis of the Iris data set by specie (class)
+
+F-iii - A. What is the difference between using all the data and using the data by specie (class)?
+When utilizing all the data, PCA aims to identify principal components that capture the maximum variance across all species combined.
+On the other hand, when analyzing the data by species, PCA focuses on finding principal components that explain the variance within 
+each species separately. This distinction allows for a more nuanced understanding of the unique patterns and variations within 
+individual species, which may not be apparent when considering all species together.
+
+F- iii - B. Percentage explained variance for each principal component (all species):
+Principal Component 1: 84.14%
+Principal Component 2: 11.73%
+Principal Component 3: 3.49%
+Principal Component 4: 0.64%
+
+Principal Component 1 captures the majority of the variance, indicating that it is the most significant component in reducing
+the dimensionality of the data.
+
+
+Percentage explained variance for each principal component by species:
+
+Species: setosa
+Principal Component 1: 83.95%
+Principal Component 2: 9.18%
+Principal Component 3: 4.98%
+Principal Component 4: 1.89%
+
+Species: versicolor
+Principal Component 1: 72.36%
+Principal Component 2: 18.11%
+Principal Component 3: 7.62%
+Principal Component 4: 1.90%
+
+Species: virginica
+Principal Component 1: 65.36%
+Principal Component 2: 22.56%
+Principal Component 3: 9.64%
+Principal Component 4: 2.44%
+
+The percentage explained for each principal component highlights how much of the species-specific variability is captured 
+by each component. For setosa, PC1 dominates with 83.95%, followed by PC2 at 9.18%. Versicolor sees PC1 at 72.36% and PC2 at 
+18.11%, while virginica shows PC1 at 65.36% and PC2 at 22.56%. These results represent the importance of the first principal 
+component in capturing the majority of species-specific variation, with subsequent components contributing to a lesser extent.
+
+
+2F - iii - C. How many principal components should you keep?
+Based on the results I keep the first two principal components as they capture the majority of the variance for all species. For 
+setosa, PC1 and PC2 together explain around 93.13% of the variance. Similarly, for versicolor and virginica, PC1 and PC2 account for 
+approximately 90.47% and 87.92% of the variance, respectively. Retaining these two principal components would preserve most of the 
+important information while reducing the dimensionality of the data.
+
+(en-685-621) (base) Nadeems-MacBook-Pro:Assignment 1 - Algorithms nadeembahou$ 
