@@ -1,16 +1,3 @@
-/Users/nadeembahou/anaconda3/envs/en-685-621/bin/python /Users/nadeembahou/Downloads/Pa1/nadeem.py
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-(en-685-621) (base) Nadeems-MacBook-Pro:Assignment 1 - Algorithms nadeembahou$ /Users/nadeembahou/anaconda3/envs/en-685-621/bin/python /Users/nadeembahou/Downloads/Pa1/nadeem.py
-/Users/nadeembahou/Downloads/Pa1/nadeem.py:1: DeprecationWarning: 
-Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-but was not found to be installed on your system.
-If this would cause problems for you,
-please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-        
   import pandas as pd
 
 #1A: statistics of each feature and class using the test statistics:
